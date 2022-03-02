@@ -3,6 +3,8 @@ import numpy as np
 from multiprocessing import Pool
 from sys import argv
 
+PADDING = 2000
+
 def makePixelate(img, output_img, imheight, imwidth, width, height, block_size, fileName):
     for i in range(0, imheight // block_size):
         for j in range(0, imwidth // block_size):
@@ -25,13 +27,13 @@ def makePixelate(img, output_img, imheight, imwidth, width, height, block_size, 
 
 def pixelate(img, block_size, fileName):
     img = cv2.imread(img)
-    img = cv2.resize(img, (2000,2000), interpolation = cv2.INTER_LINEAR)
+    img = cv2.resize(img, (PADDING,), interpolation = cv2.INTER_LINEAR)
     imwidth, imheight = img.shape[:2]
 
     height = imheight // (imheight // block_size)
     width = imwidth // (imwidth // block_size)
     
-    output_img = np.ones((2000,2000,3), np.uint8)*255
+    output_img = np.ones((PADDING,PADDING,3), np.uint8)*255
 
     pool = Pool(16)
     pool.starmap(makePixelate, [(img, output_img, imheight, imwidth, width, height, block_size, fileName)])
@@ -39,6 +41,6 @@ def pixelate(img, block_size, fileName):
 
 if __name__ == "__main__":
     if len(argv) != 4:
-        print("Usage: python3 pyPixelate.py <image> <block size (can be divided with 2000)> <output image (e.g. 1.jpg)>")
+        print("Usage: python3 pyPixelate.py <image> <block size (can be divided with PADDING)> <output image (e.g. 1.jpg)>")
         exit(1)
     pixelate(argv[1], int(argv[2]), argv[3])
