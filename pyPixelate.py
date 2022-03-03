@@ -27,7 +27,7 @@ def makePixelate(img, output_img, imheight, imwidth, width, height, block_size, 
 
 def pixelate(img, block_size, fileName):
     img = cv2.imread(img)
-    img = cv2.resize(img, (PADDING,), interpolation = cv2.INTER_LINEAR)
+    img = cv2.resize(img, (PADDING,PADDING), interpolation = cv2.INTER_LINEAR)
     imwidth, imheight = img.shape[:2]
 
     height = imheight // (imheight // block_size)
