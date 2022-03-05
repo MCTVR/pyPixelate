@@ -4,6 +4,7 @@ from multiprocessing import Pool
 from sys import argv
 
 PADDING = 2000
+GRID_LINES = False
 
 def makePixelate(img, output_img, imheight, imwidth, width, height, block_size, fileName):
     for i in range(0, imheight // block_size):
@@ -18,8 +19,11 @@ def makePixelate(img, output_img, imheight, imwidth, width, height, block_size, 
             mean_color = np.mean(a, axis=(0, 1))
             mean_color = tuple([int(mean_color[0]), int(mean_color[1]), int(mean_color[2])])
 
-            a = np.ones((height-2, width-2, 3), np.uint8)*mean_color
-            a = cv2.copyMakeBorder(a, 1, 1, 1, 1, borderType=cv2.BORDER_CONSTANT,value=0)
+            if GRID_LINES:
+                a = np.ones((height-2, width-2, 3), np.uint8)*mean_color
+                a = cv2.copyMakeBorder(a, 1, 1, 1, 1, borderType=cv2.BORDER_CONSTANT,value=0)
+            else:
+                a = np.ones((height, width, 3), np.uint8)*mean_color
 
             output_img[y:y2, x:x2] = a
 
