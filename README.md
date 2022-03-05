@@ -2,7 +2,12 @@
  pyPixelate pixelates your image into a pixel art asthetic.
 
 ## Example:
-### Original & Output (Original, 25px per tile, 50px per tile, 100px per tile)
+### Original & Output (pyPixelate.py, Original, 25px per tile, 50px per tile, 100px per tile)
+<p float="left">
+<img src="target.jpg" height="300px" /><img src="output.jpg" height="300px" /><img src="output1.jpg" height="300px" /><img src="output2.jpg" height="300px" />
+</p>
+
+### Original & Output (pyPixelateE.py, Original, 25px per tile, 50px per tile, 100px per tile)
 <p float="left">
 <img src="target.jpg" height="300px" /><img src="output.jpg" height="300px" /><img src="output1.jpg" height="300px" /><img src="output2.jpg" height="300px" />
 </p>
