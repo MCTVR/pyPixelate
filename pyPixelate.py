@@ -4,7 +4,7 @@ from multiprocessing import Pool
 from sys import argv
 
 PADDING = 2000
-GRID_LINES = False
+GRID_LINES = True
 
 def makePixelate(img, output_img, imheight, imwidth, width, height, block_size, fileName):
     for i in range(0, imheight // block_size):
