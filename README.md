@@ -4,7 +4,7 @@
 ## Example:
 ### Original & Output (25px per tile, 50px per tile)
 <p float="left">
-<img src="target.jpg" height="300px" /><img src="output.jpg" height="300px" /><img src="output1.jpg" height="300px" />
+<img src="target.jpg" height="300px" /><img src="output.jpg" height="300px" /><img src="output1.jpg" height="300px" /><img src="output2.jpg" height="300px" />
 </p>
 
 Credits: <a href="https://akebi-chan.jp/">https://akebi-chan.jp/</a>
