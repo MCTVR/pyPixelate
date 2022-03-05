@@ -19,7 +19,7 @@ Credits: <a href="https://akebi-chan.jp/">https://akebi-chan.jp/</a>
 - numpy
 - cv2
 
-## Usage
+## Usage (pyPixelate.py)
 
 Windows:
 ```console
@@ -29,6 +29,17 @@ python pyPixelate.py <image> <block size> <output image (e.g. 1.jpg)>
 Linux & macOS:
 ```console
 python3 pyPixelate.py <image> <block size> <output image (e.g. 1.jpg)>
+```
+
+## Usage (pyPixelateE.py) (E for Enhanced and Experimental)
+Windows:
+```console
+python pyPixelateE.py <image> <block size> <output image (e.g. 1.jpg)>
+```
+
+Linux & macOS:
+```console
+python3 pyPixelateE.py <image> <block size> <output image (e.g. 1.jpg)>
 ```
 
 It might take a while to create a the Photo Mosaics.
