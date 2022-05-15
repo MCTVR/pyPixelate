@@ -42,7 +42,7 @@ Linux & macOS:
 python3 pyPixelateE.py <image> <block size> <output image (e.g. 1.jpg)>
 ```
 
-It might take a while to create a the Photo Mosaics.
+It might take a while to create a the pixelised picture.
 
 ## Parameters
 - `PADDING` (Image Output Size, must be a multiple of `block size`)
